@@ -147,33 +147,64 @@ table {
 html,
 body {
   font-size: 62.5%;
-  height: 100%;
 }
 body {
   background-image: url("../img/main-bg.jpg");
-  background-position: top right;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 550px) {
+  body {
+    background-attachment: fixed;
+    background-position: bottom;
+  }
+}
+strong {
+  font-weight: bold;
+  color: #1a1927;
+}
+i {
+  margin-bottom: 2%;
+  color: orange;
 }
 h1 {
   font-family: 'Baskervville', serif;
   font-weight: bold;
   font-size: 2.6rem;
+  color: #1a1927;
 }
 h2 {
   font-family: 'Baskervville', serif;
   font-weight: bold;
   font-size: 2rem;
+  color: #1a1927;
+}
+h3 {
+  font-family: 'Gelasio', serif;
+  font-size: 1.4rem;
+  color: #1a1927;
 }
 p,
 ul,
 li {
   font-family: 'Gelasio', serif;
   font-size: 1.8rem;
+  color: #1a1927;
 }
 .container {
-  width: 100%;
-  padding: 0% 10%;
+  width: 75%;
+  margin: 2% auto;
+}
+@media (max-width: 900px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 96%;
+  }
 }
 .profile-image {
   border-radius: 50%;
@@ -184,9 +215,14 @@ li {
   align-items: center;
   text-align: center;
   border-radius: 25px;
-  margin: 4% 0%;
+  margin: 3% 0%;
   padding: 2%;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .welcome {
+    margin: 0% 0% 2% 0%;
+  }
 }
 .welcome div {
   margin: 0.5%;
@@ -199,7 +235,7 @@ nav {
 .navbar {
   display: flex;
   font-family: 'Gelasio', serif;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-top: 3%;
   font-size: 1.6rem;
@@ -210,6 +246,20 @@ nav {
   padding: 0% 2% 0%;
   color: #2b2b2b;
 }
+.navbar a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .navbar a {
+    margin-bottom: 8%;
+    font-size: 1.7rem;
+  }
+}
 .about-me {
   display: flex;
   justify-content: space-between;
@@ -217,10 +267,27 @@ nav {
   width: 100%;
   margin-bottom: 3%;
 }
+@media (max-width: 500px) {
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.3;
+  }
+  .about-me div {
+    margin-bottom: 8%;
+    width: 100%;
+  }
+  .about-me ul,
+  .about-me li,
+  .about-me .skills {
+    text-align: center;
+    width: 100%;
+  }
+}
 .about-me h2 {
   margin-bottom: 1%;
   width: 100%;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #1a1927;
   line-height: 1.2;
 }
 .about-me .details {
@@ -231,7 +298,79 @@ nav {
   width: 30%;
   padding-right: 3%;
 }
+@media (max-width: 500px) {
+  .about-me .skills {
+    width: 45%;
+  }
+}
 .about-me .skills li {
   line-height: 1.4;
   font-size: 1.6rem;
+}
+.my-exp {
+  border-bottom: 1px solid #1a1927;
+  width: 97%;
+  color: #1a1927;
+}
+.experience-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1% 6% 4% 0%;
+}
+.work-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-right: 3%;
+}
+.work-container div {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  margin: 1%;
+  text-align: justify;
+}
+.work-container div h2 {
+  text-align: center;
+  padding: 4% 0%;
+}
+.work-container div i {
+  text-align: center;
+}
+.projects {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+@media (max-width: 650px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .projects img {
+    width: 60%;
+  }
+  .projects div {
+    padding: 2%;
+    margin-top: 2%;
+    width: 80%;
+  }
+}
+.projects div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1%;
+}
+.projects div:hover {
+  opacity: 0.8;
+}
+.projects div img {
+  min-width: 0;
+  text-align: center;
 }
