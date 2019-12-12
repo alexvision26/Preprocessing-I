@@ -198,7 +198,12 @@ li {
 }
 @media (max-width: 900px) {
   .container {
-    width: 80%;
+    width: 85%;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    width: 94%;
   }
 }
 @media (max-width: 500px) {
@@ -318,6 +323,17 @@ nav {
   justify-content: space-between;
   padding: 1% 6% 4% 0%;
 }
+@media (max-width: 750px) {
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .experience-container div {
+    padding: 2%;
+    margin-bottom: 2%;
+  }
+}
 .work-container {
   display: flex;
   justify-content: space-evenly;
@@ -367,10 +383,10 @@ nav {
   width: 100%;
   padding: 1%;
 }
-.projects div:hover {
-  opacity: 0.8;
-}
 .projects div img {
   min-width: 0;
   text-align: center;
+}
+.projects div img:hover {
+  opacity: 0.8;
 }
